@@ -16,3 +16,9 @@ use Illuminate\Support\Facades\Route;
 Route::name('auth.')->group(function () {
     Route::post('auth/login', 'AuthenticationController@login')->name('login');
 });
+
+Route::middleware(['auth:users'])->group(function () {
+    Route::get('foo', function () {
+        return 'Hello World';
+    });
+});

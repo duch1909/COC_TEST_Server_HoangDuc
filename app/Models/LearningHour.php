@@ -14,13 +14,4 @@ class LearningHour extends Model
     protected $fillable = [
         'learning_hour'
     ];
-
-    // /**
-    //  * The attributes that should be cast to native types.
-    //  *
-    //  * @var array
-    //  */
-    // protected $casts = [
-    //     'learning_hour' => 'time',
-    // ];
 }
