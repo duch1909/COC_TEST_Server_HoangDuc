@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<ruleset name="Custom Standard">
+    <rule ref="PSR2">
+        <exclude name="Generic.Files.LineLength"/>
+        <exclude name="PSR1.Classes.ClassDeclaration.MissingNamespace"/>
+    </rule>
+
+    <rule ref="ImportDetection"/>
+    <rule ref="ImportDetection.Imports.RequireImports">
+        <properties>
+            <property name="ignoreUnimportedSymbols" value="/^(dispatch|app|config|config_path|response|env|collect|optional|class_basename|__|public_path|storage_path|resource_path|base_path|redirect|view|database_path|secure_url|event|route|head)$/" />
+        </properties>
+    </rule>
+
+    <exclude-pattern>\.blade\.php</exclude-pattern>
+    <exclude-pattern>vendor/*</exclude-pattern>
+    <exclude-pattern>config/*</exclude-pattern>
+</ruleset>
