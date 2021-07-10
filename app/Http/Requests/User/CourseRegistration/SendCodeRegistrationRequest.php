@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Requests\CourseRegistration;
+namespace App\Http\Requests\User\CourseRegistration;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class SendCodeRegistration extends FormRequest
+class SendCodeRegistrationRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.

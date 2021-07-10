@@ -4,9 +4,9 @@ namespace App\Http\Controllers\User;
 
 use App\Http\Controllers\Controller;
 use App\Models\CourseRegistration;
-use App\Http\Requests\CourseRegistration\ListCourseRegistrationRequest;
-use App\Http\Requests\CourseRegistration\SendCodeRegistration;
-use App\Http\Requests\CourseRegistration\UpdateCourseRegistrationRequest;
+use App\Http\Requests\User\CourseRegistration\ListCourseRegistrationRequest;
+use App\Http\Requests\User\CourseRegistration\SendCodeRegistrationRequest;
+use App\Http\Requests\User\CourseRegistration\UpdateCourseRegistrationRequest;
 use App\Http\Requests\User\CourseRegistration\CreateCourseRegistrationRequest;
 use App\Http\Resources\CourseRegistration\CourseRegistrationCollection;
 use App\Http\Resources\CourseRegistration\CourseRegistrationResource;
@@ -58,7 +58,7 @@ class CourseRegistrationController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @param \App\Http\Requests\CourseRegistration\ListCourseRegistrationRequest $request
+     * @param \App\Http\Requests\User\CourseRegistration\ListCourseRegistrationRequest $request
      * @return \Illuminate\Http\Response
      */
     public function index(ListCourseRegistrationRequest $request)
@@ -71,7 +71,7 @@ class CourseRegistrationController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\CourseRegistration\UpdateCourseRegistrationRequest  $request
+     * @param  \App\Http\Requests\User\CourseRegistration\UpdateCourseRegistrationRequest  $request
      * @param \App\Models\CourseRegistration $courseRegistration
      * @return \Illuminate\Http\Response
      */
@@ -85,7 +85,6 @@ class CourseRegistrationController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param \App\Http\Requests\Client\Table\DeleteTableRequest $request
      * @param \App\Models\CourseRegistration $courseRegistration
      * @return \Illuminate\Http\Response
      */
@@ -112,10 +111,10 @@ class CourseRegistrationController extends Controller
     /**
      * Send token to email's user
      *
-     * @param \App\Models\CourseRegistration $courseRegistration
+     * @param \App\Http\Requests\User\CourseRegistration\SendCodeRegistrationRequest $courseRegistration
      * @return \Illuminate\Http\Response
      */
-    public function sendToken(SendCodeRegistration $request)
+    public function sendToken(SendCodeRegistrationRequest $request)
     {
         $this->sendTokenService->setRequest($request)->handle();
 

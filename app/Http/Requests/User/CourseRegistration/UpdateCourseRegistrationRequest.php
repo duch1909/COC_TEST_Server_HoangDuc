@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Requests\CourseRegistration;
+namespace App\Http\Requests\User\CourseRegistration;
 
 use App\Rules\Phone;
 use Illuminate\Foundation\Http\FormRequest;

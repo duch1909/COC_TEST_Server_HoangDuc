@@ -30,5 +30,7 @@ class CustomizeAuthentication extends Authenticate
                 throw new AuthenticationException();
             }
         }
+
+        return $next($request);
     }
 }

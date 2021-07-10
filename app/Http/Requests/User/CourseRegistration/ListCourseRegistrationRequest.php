@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Requests\CourseRegistration;
+namespace App\Http\Requests\User\CourseRegistration;
 
 use Mi\Core\Requests\BaseRequest;
 
