@@ -21,14 +21,15 @@ class CreateRegistrationsTable extends Migration
             $table->string('phone', 20);
             $table->string('email');
             $table->date('start_date');
+            $table->string('image');
             $table->unsignedInteger('start_time_id');
             $table->unsignedInteger('learning_hour_id');
             $table->unsignedInteger('duration_id');
             $table->unsignedInteger('course_id');
-            $table->date('end_date')->nullable();
-            $table->time('end_time')->nullable();
-            $table->time('token')->nullable();
-            $table->rememberToken();
+            $table->date('end_date');
+            $table->time('end_time');
+            $table->string('token')->nullable();
+            $table->softDeletes();
             $table->timestamps();
 
             $table->foreign('start_time_id')

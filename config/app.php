@@ -54,6 +54,8 @@ return [
 
     'url' => env('APP_URL', 'http://localhost'),
 
+    'web_url' => env('WEB_URL', 'http://localhost'),
+
     'asset_url' => env('ASSET_URL', null),
 
     /*
@@ -162,7 +164,8 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
         \App\Providers\ResponseServiceProvider::class,
-
+        Prettus\Repository\Providers\RepositoryServiceProvider::class,
+        
         /*
          * Package Service Providers...
          */
@@ -175,6 +178,7 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+        App\Providers\TelescopeServiceProvider::class,
         Tymon\JWTAuth\Providers\LaravelServiceProvider::class,
     ],
 

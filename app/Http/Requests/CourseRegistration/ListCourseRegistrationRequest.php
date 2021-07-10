@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Requests\Admin\Authentication;
+namespace App\Http\Requests\CourseRegistration;
 
 use Mi\Core\Requests\BaseRequest;
 
-class LoginRequest extends BaseRequest
+class ListCourseRegistrationRequest extends BaseRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -23,14 +23,6 @@ class LoginRequest extends BaseRequest
      */
     public function rules()
     {
-        return [
-            'email' => [
-                'required',
-                'email'
-            ],
-            'password' => [
-                'required'
-            ]
-        ];
+        return $this->commonListRules();
     }
 }

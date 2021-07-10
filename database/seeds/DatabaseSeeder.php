@@ -1,11 +1,6 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use StartTimeSeeder;
-use DurationSeeder;
-use CourseSeeder;
-use LearningHourSeeder;
-use UserSeeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -17,11 +12,11 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         $this->call([
-            StartTimeSeeder::class,
-            DurationSeeder::class,
-            CourseSeeder::class,
-            LearningHourSeeder::class,
-            UserSeeder::class
+            \StartTimeSeeder::class,
+            \DurationSeeder::class,
+            \CourseSeeder::class,
+            \LearningHourSeeder::class,
+            \UserSeeder::class
         ]);
     }
 }

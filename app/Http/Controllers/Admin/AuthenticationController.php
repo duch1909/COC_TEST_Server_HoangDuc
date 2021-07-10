@@ -18,6 +18,6 @@ class AuthenticationController extends Controller
             throw AuthException::invalidCredentials();
         }
 
-        return response()->created($token);
+        return response()->success($token);
     }
 }

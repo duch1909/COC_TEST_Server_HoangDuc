@@ -8,7 +8,7 @@
     <rule ref="ImportDetection"/>
     <rule ref="ImportDetection.Imports.RequireImports">
         <properties>
-            <property name="ignoreUnimportedSymbols" value="/^(dispatch|app|config|config_path|response|env|collect|optional|class_basename|__|public_path|storage_path|resource_path|base_path|redirect|view|database_path|secure_url|event|route|head)$/" />
+            <property name="ignoreUnimportedSymbols" value="/^(dispatch|factory|app|config|config_path|response|env|collect|optional|class_basename|__|public_path|storage_path|resource_path|base_path|redirect|view|database_path|secure_url|event|route|head)$/" />
         </properties>
     </rule>
 

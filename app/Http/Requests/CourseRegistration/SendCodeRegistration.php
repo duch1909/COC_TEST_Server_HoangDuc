@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Requests\Admin\Authentication;
+namespace App\Http\Requests\CourseRegistration;
 
-use Mi\Core\Requests\BaseRequest;
+use Illuminate\Foundation\Http\FormRequest;
 
-class LoginRequest extends BaseRequest
+class SendCodeRegistration extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -28,8 +28,9 @@ class LoginRequest extends BaseRequest
                 'required',
                 'email'
             ],
-            'password' => [
-                'required'
+            'id' => [
+                'required',
+                'integer'
             ]
         ];
     }
