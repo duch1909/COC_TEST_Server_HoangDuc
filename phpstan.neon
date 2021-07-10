@@ -1,0 +1,31 @@
+includes:
+    - ./vendor/nunomaduro/larastan/extension.neon
+parameters:
+    level: 5
+    autoload_directories:
+        - database
+    fileExtensions:
+        - php
+    paths:
+        - app
+        - bootstrap/app.php
+        - config
+        - database
+        - packages
+        - resources
+        - routes
+        # - tests
+    excludes_analyse:
+        - packages/swagger
+        - app/Console/Commands/stubs
+        - packages/core/src/Commands/stubs
+        - packages/*/vendor/*
+    ignoreErrors:
+        - '#Call to an undefined method Illuminate\\Contracts\\Routing\\ResponseFactory::(success|created|successWithoutData|invalid|error)#'
+        - '#Call to an undefined method Illuminate\\Database\\Eloquent\\Model::#'
+        - '#Undefined variable: \$factory#'
+        - '#Call to an undefined method Illuminate\\Contracts\\Auth\\Guard::getPayload#'
+        - '#Call to an undefined method App\\Providers\\AppServiceProvider::(isQueryable|createSub|addBinding|grammar|copy|selectRaw)#'
+        - '#Access to an undefined property App\\Providers\\AppServiceProvider::\$(unions|year|grammar)#'
+        - '#Call to an undefined method Carbon\\CarbonInterface::isHoliday#'
+        - '#Access to an undefined property ipinfo\\ipinfo\\Details::\$country#'

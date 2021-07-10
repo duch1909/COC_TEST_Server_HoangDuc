@@ -11,6 +11,12 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // $this->call(UserSeeder::class);
+        $this->call([
+            \StartTimeSeeder::class,
+            \DurationSeeder::class,
+            \CourseSeeder::class,
+            \LearningHourSeeder::class,
+            \UserSeeder::class
+        ]);
     }
 }

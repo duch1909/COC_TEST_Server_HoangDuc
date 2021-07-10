@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# Make sure all files are tracked
+printf "\e[96mMake sure all files are tracked to Git\e[0m\n"
+git add .
+
+# Get list of changed files
+printf "\e[96mGet list of changed files\e[0m\n"
+changed_files=$(git diff-index --name-only --diff-filter=d develop)
+
+if [[ -z $changed_files ]]; then
+    echo "Nothing changes"
+    exit 0
+fi
+
+# Perform phpcs
+php vendor/bin/phpcs --extensions=php $changed_files
+
+# # # Perform phpmd
+php vendor/bin/phpmd "$(echo $changed_files | sed 's/ /,/g')" text ./phpmd.xml

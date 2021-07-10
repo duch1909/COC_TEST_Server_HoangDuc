@@ -133,6 +133,9 @@ return [
         'attribute-name' => [
             'rule-name' => 'custom-message',
         ],
+        'phone' => [
+            'Please enter the correct format phone number.'
+        ]
     ],
 
     /*
